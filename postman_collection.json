@@ -1,0 +1,105 @@
+{
+  "info": {
+    "name": "Retrobyte API",
+    "description": "Colección de Postman para probar el CRUD de videojuegos retro (compra y alquiler).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Inicio",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Listar videojuegos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videojuegos",
+          "host": ["{{base_url}}"],
+          "path": ["videojuegos"]
+        }
+      }
+    },
+    {
+      "name": "Buscar videojuego por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videojuegos/1",
+          "host": ["{{base_url}}"],
+          "path": ["videojuegos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Agregar videojuego",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Castlevania: Symphony of the Night\",\n  \"consola\": \"PlayStation\",\n  \"anio\": 1997,\n  \"precio_compra\": 64.99,\n  \"precio_alquiler\": 5.99,\n  \"disponible\": true,\n  \"imagen_url\": \"https://upload.wikimedia.org/wikipedia/en/c/cf/Castlevania_SOTN_PAL.jpg\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/videojuegos",
+          "host": ["{{base_url}}"],
+          "path": ["videojuegos"]
+        }
+      }
+    },
+    {
+      "name": "Editar videojuego",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Castlevania: Symphony of the Night\",\n  \"consola\": \"PS1\",\n  \"anio\": 1997,\n  \"precio_compra\": 59.99,\n  \"precio_alquiler\": 4.99,\n  \"disponible\": false,\n  \"imagen_url\": \"https://upload.wikimedia.org/wikipedia/en/c/cf/Castlevania_SOTN_PAL.jpg\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/videojuegos/1",
+          "host": ["{{base_url}}"],
+          "path": ["videojuegos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Borrar videojuego",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/videojuegos/1",
+          "host": ["{{base_url}}"],
+          "path": ["videojuegos", "1"]
+        }
+      }
+    }
+  ]
+}
