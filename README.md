@@ -3,8 +3,8 @@
 Tienda y alquiler de videojuegos retro desarrollada en pareja con **FastAPI**, **Supabase (PostgreSQL)** y frontend en **Stitch**.
 
 ## Integrantes
-- **[Nombre 1]**
-- **[Nombre 2]**
+- **Fabián Crisanto**
+- **Mario Matías**
 
 ## Enlaces
 - **API en Render (`/docs`):** `https://TU-API.onrender.com/docs` *(pendiente de despliegue)*
