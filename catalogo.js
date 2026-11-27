@@ -84,3 +84,5 @@
     "precio_alquiler": 2.50
   }
 ]
+
+//Lista proviosnal. Se modificará a futuro.
